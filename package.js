@@ -1,16 +1,16 @@
 Package.describe({
-  name: 'meteor-node-forge',
-  version: '0.6.35',
+  name: 'lsun:meteor-node-forge',
+  version: '0.6.35_3',
   // Brief, one-line summary of the package.
-  summary: 'JavaScript implementations of network transports, cryptography, ciphers, PKI, message digests, and various utilities.', // URL to the Git repository containing the source code for this package.
-  git: '',
+  summary: 'A meteor wrapper for node-forge', // URL to the Git repository containing the source code for this package.
+  git: 'https://github.com/liangsun/meteor-node-forge',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
 });
 
 Npm.depends({
-  node-forge: '0.6.35'
+  "node-forge": "0.6.35"
 });
 
 Package.onUse(function(api) {
@@ -23,6 +23,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('meteor-node-forge');
+  api.use('lsun:meteor-node-forge');
   api.addFiles('meteor-node-forge-tests.js');
 });
