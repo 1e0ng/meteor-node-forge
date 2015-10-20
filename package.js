@@ -1,6 +1,6 @@
 Package.describe({
   name: 'lsun:meteor-node-forge',
-  version: '0.6.35_3',
+  version: '0.6.35_4',
   // Brief, one-line summary of the package.
   summary: 'A meteor wrapper for node-forge', // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/liangsun/meteor-node-forge',
@@ -16,7 +16,7 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
   api.use('ecmascript');
-  api.addFiles('meteor-node-forge.js');
+  api.addFiles('meteor-node-forge.js', ['server']);
   api.export('forge');
 });
 
